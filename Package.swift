@@ -5,8 +5,8 @@ let package = Package(
     name: "SQLite.swift",
     products: [.library(name: "SQLite", targets: ["SQLite"])],
     targets: [
-        .target(name: "SQLite", dependencies: ["SQLiteObjc"]),
-        .target(name: "SQLiteObjc"),
+        .target(name: "SQLite"),
+        .target(name: "SQLiteObjc", dependencies: ["SQLite"]),
         .testTarget(name: "SQLiteTests", dependencies: ["SQLite"], path: "Tests/SQLiteTests")
     ],
     swiftLanguageVersions: [4, 5]
